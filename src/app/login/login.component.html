@@ -1,0 +1,13 @@
+<div class="login" *ngIf="!auth.loggedIn()">
+	<div>
+		<h1>Login Bolsista</h1>
+		Login: <input type="text" [(ngModel)]="login"><br/>
+		Senha: <input type="password" [(ngModel)]="senha"><br/>
+		<button [disabled]="login === '' || senha === ''" (click)="entrar()">CONFIRMAR</button>
+	</div>
+</div>
+<div class="gp" *ngIf="auth.loggedIn()">
+		<h1>Gerenciar Perfil</h1>
+		<h2>{{ login | uppercase }}</h2>
+		<button (click)="mudarSenha()">Mudar minha senha</button>
+</div>

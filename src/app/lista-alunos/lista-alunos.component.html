@@ -1,0 +1,27 @@
+<div class="form-aluno" *ngIf="showFormNovoAluno">
+	<h2>Cadastrar Aluno</h2>
+	Matricula: <input class="text-input" type="number" [(ngModel)]="novoAluno.matricula"><br>
+	Nome: <input class="text-input" type="text" [(ngModel)]="novoAluno.nome"><br>
+	<button class="confirm-presenca center" (click)="cadastrar()">Cadastrar</button>
+</div>
+<h1>Lista de Alunos</h1>
+<button class="confirm-presenca center" (click)="adicionarPresencas()">Adicionar Presenças</button>
+<input class="text-input search" type="text" [(ngModel)]="termoBusca" (ngModelChange)="search()" placeholder="Pesquisar..."><br>
+<ul>
+	<li *ngFor="let aluno of listaAlunos">
+		<div class="aluno" *ngIf="listaMostrados.includes(aluno)">
+			<button class="edit-item" (click)="toggleEditAluno(aluno)">{{ alunoEmEdicao(aluno) ? "Salvar" : "" }}
+				<img *ngIf="!alunoEmEdicao(aluno)" src="../assets/default-image.png" alt="">
+			</button>
+			<p *ngIf="!alunoEmEdicao(aluno)">{{ aluno.nome }}</p>
+			<input type="text" [(ngModel)]="aluno.nome" *ngIf="alunoEmEdicao(aluno)" placeholder="Aluno">
+			<div class="checkbox-right">
+				<label class="checkboxcontainer">
+					<input type="checkbox" [checked]="alunoChecado(aluno)" (click)="toggleAluno(aluno)">
+					<span class="checkmark"></span>
+				</label>
+			</div>
+		</div>
+	</li>
+</ul>
+<button class="add-item" (click)="showFormNovoAluno = !showFormNovoAluno"><img src="../assets/default-image.png" alt=""></button>

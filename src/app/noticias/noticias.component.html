@@ -1,0 +1,17 @@
+<div class="section-header">
+	<img class="section-icon icon-news" src="../assets/noticia.png" alt="">
+	<h1>NOTÍCIAS</h1>
+</div>
+<hr class="section-line">
+<ul class="noticias">
+	<li *ngFor="let noticia of noticias" [class.selected]="noticia === noticiaSelecionada" (click)="onSelect(noticia)">
+		<img class="listico" src="../assets/dice not.png" alt="">
+		<a class="not" routerLink="{{ '/noticia/'+noticia.id }}" (click)="messageService.clear()">
+			<h3 class="notnome">{{ noticia.titulo }}</h3>
+			<h5 class="nottime" >{{ noticia.dataEdicao.fromNow() }}</h5>
+		</a>
+		<a *ngIf="auth.loggedIn()" routerLink="{{'/noticia/edit/'+noticia.id}}" (click)="messageService.clear()"><img src="../assets/edititem.png" alt=""></a>
+	</li>
+</ul>
+<h2 *ngIf="!loaded || noticias.length <= 0">{{ loaded ? "Não existem notícias!" : "Carregando notícias..." }}</h2>
+<a *ngIf="auth.loggedIn()" routerLink="/noticia/edit/-1" (click)="messageService.clear()" class="add-item"><img src="../assets/addnoti.png" alt=""></a>

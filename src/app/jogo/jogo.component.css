@@ -1,0 +1,362 @@
+@font-face{
+  font-family: BalooRegular;
+  src: url("../../fonts/Baloo-Regular.ttf");
+}
+@font-face{
+  font-family: Pridi;
+  src: url("../../fonts/Pridi-Regular.ttf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: PridiBold;
+  src: url("../../fonts/Pridi-SemiBold.ttf");
+}
+@font-face{
+  font-family: Lateef;
+  src: url("../../fonts/LateefRegOT.ttf");
+}
+.jogos{
+	padding: 0px;
+	list-style: none;
+  display: inline-table;
+  margin-bottom: 24vw;
+}
+.busca{
+	border: 0.5vw solid #DF704A;
+    border-radius: 2vw;
+    border-color: #DF704A;
+    width: 88vw;
+    font-size: 4vw;
+    color: #DF704A;
+    display: inline-block;
+    margin-bottom: 2vw;
+}
+
+h2{
+    font-family: Pridi;
+    color: #f7aa71;
+    margin: 0vw;
+    margin-top: 2vw;
+    font-size: 4vw;
+}
+
+input[type=text]{
+	float: left;
+	margin: 0px;
+	border-radius: 0px;
+	border: solid 0px;
+	border-left: solid 2px #F7AA71;
+	border-right: solid 2px #F7AA71;
+	padding-left: 1vw;
+    color: #F7AA71;
+    margin-top: 1px;
+    font-size: 4vw;
+	width: 60vw;
+	height: 7.5vw;
+}
+
+.busca button.searchbtn{
+  font-family: Segoe UI Symbol;
+  font-size: 5.5vw;
+  margin: 0px;
+}
+
+.busca button{
+	font-family: Pridi;
+    font-size: 3.5vw;
+	margin:0px;
+	height: 8.5vw;
+	float: left;
+	background-color: transparent;
+	border: solid 0;
+	transition: background-color 0.2s, color 0.2s;
+    color:#DF704A;
+}
+.busca button:hover{
+	background-color: #F7AA71;
+	color:#000;
+}
+
+.Settings{
+	display: inline-flex;
+	height: 10vw;
+    margin-bottom: 2vw;
+    width: 88.56vw;
+}
+.Settings img{
+	height: 10vw;
+	width: 10vw;
+	margin-right: 1vw;
+    float: left;
+}
+.Settings select{
+	font-family: BalooRegular;
+	width: 35vw;
+	height: 10vw;
+    color: #F7AA71;
+	border: solid 0;
+    margin-top: 0px;
+    font-size: 4vw;
+    float: left;
+	transition: background-color 0.2s, color 0.2s;
+}
+.Settings select:hover{
+	background-color: #F7AA71;
+	color:#000;
+}
+.Settings button{
+	font-family: Pridi;
+    font-size: 3vw;
+	height: 10vw;
+	margin:0px;
+	background-color: transparent;
+	border: solid 0;
+	transition: background-color 0.2s, color 0.2s;
+    color:#DF704A;
+    float: left;
+}
+.Settings button:hover{
+	background-color: #F7AA71;
+	color:#000;
+}
+
+.Settings button.PAbtn{
+	font-family: BalooRegular;
+	line-height: 3.1vw;
+    font-size: 4vw;
+	height: 10vw;
+	margin:0px;
+	background-color: #DF704A;
+	border: solid 0;
+	border-radius: 2vw;
+	transition: background-color 0.2s, color 0.2s;
+    color:#FFEADD;
+    float: right;
+    margin-right: 1vw; 
+}
+.Settings button.PAbtn:hover{
+	background-color: #F7AA71;
+	color:#000;
+}
+
+.picon{
+	font-family: Segoe UI Symbol;
+	float: left;
+	font-size: 6vw;
+	margin: 0px;
+	margin-top: 1.2vw;
+}
+
+.ptext{
+	margin: 0px;
+	margin-left: 1vw; 
+	float: left;
+}
+
+.jogos h3{
+	text-align: left;
+  font-family: PridiBold;
+	color: #294D60;
+  width: 50vw;
+	font-size: 4vw;
+}
+
+.filtros div {
+    background-color: #f7aa71;
+    padding: 1vw 0vw 0vw;
+    text-align: center;
+    border-radius: 2vw;
+}
+
+input[type=range]{
+	width: 80vw;
+}
+
+input[type=checkbox]{
+    background: #fff;
+    border: 3px solid #294d60;
+    border-radius: 1vw;
+    width: 6vw;
+    height: 6vw;
+    margin-left: 3vw;
+	float: left;
+    position: relative;
+    margin-bottom: 2.5vw;
+    transition: background-color 0.5s, color 0.5s, border-radius 0.5s,background 0.5s;
+    -webkit-appearance: inherit;
+    margin-top: 2.5vw;
+}
+input[type=checkbox]:checked{
+	background-color: #F7AA71;
+    border: 3px solid #294d60;
+    border-radius: 10vw;
+}
+input[type=checkbox]:hover{
+    border-radius: 5vw;
+}
+.filtros p{
+	margin: 0px;
+	font-family: PridiBold;
+	font-size: 3.5vw;
+	padding-top: 2.5vw;
+}
+
+.filtros{
+	padding: 2vw;
+    border-bottom: 3px solid #294d60;
+    background-color: #00a6c466;
+    border-radius: 2vw;
+    display: inline-block;
+}
+.filtros button{
+    font-family: BalooRegular;
+    font-size: 4vw;
+    float: right;
+    background-color: #df704a;
+    border: 0 solid;
+    border-radius: 2vw;
+    transition: background-color .2s,color .2s;
+    color: #ffeadd;
+}
+.filtros button:hover{
+	background-color: #F7AA71;
+	color:#000;
+}
+
+.filtros h3{
+	margin-top: 0vw;
+}
+
+.jogos li {
+	display: inline-block;
+	width: 83vw;
+	padding: 2vw;
+	margin-bottom: 1vw;	
+}
+
+.jogos li:hover{
+	background-color: #FFEADD;
+}
+
+.iconeJogo{
+	height: 15vw;
+	width: 25vw;
+	float: left;
+	text-align: center;
+	justify-content: center;
+	background-color: #345;
+}
+img.iconeJogo{
+	height: 15vw;
+	width: auto;
+	float: none;
+}
+
+.searchbtn{
+    font-family: "Segoe UI Symbol";
+    font-size: 6vw;
+	margin:0px;
+	height: 10vw;
+	background-color: transparent;
+	border: solid 0;
+	transition: background-color 0.2s, color 0.2s;
+    color:#DF704A;
+}
+
+.searchbtn:hover{
+	background-color: #F7AA71;
+	color:#000;
+}
+
+a {
+	text-decoration: none;
+}
+
+.edit-pencil {
+	float: right;
+	width: 8vw;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+}
+
+.jogoinfo {
+    height: auto;
+    float: left;
+    width: 50vw;
+    display: block;
+}
+
+.jogos .jogoinfo h3,h4 {
+	padding-top: 0px;
+	margin: 0px;
+	margin-left: 3vw;
+	float:left;
+	color: #294D60;
+  font-weight: normal;
+  display: inline-flex;
+}
+
+.jogos .jogoinfo h3{
+    text-align: left;
+    float: none;
+    font-family: PridiBold;
+    font-size: 4vw;
+}
+.jogos .jogoinfo h4{
+  	font-family: Pridi;
+	border-left: solid 2px #DF704A;
+	font-size: 3vw;
+	padding-left: 1vw;
+	margin-top: 1vw; 
+}
+.tico, .pico{
+	height: auto;
+	float:left;
+	width: 4vw;
+	height: 4vw;
+	display: block;
+}
+.dico{
+	height: auto;
+	float:left;
+	width: 6vw;
+	height: 4vw;
+	display: block;
+}
+
+a.edit-item img{
+	width: 9vw;
+    position: absolute;
+    right: 0.5vw;
+}
+
+a.add-item {
+	float: right;
+}
+
+a.add-item img {
+	width: 20vw;
+	position: fixed;
+	border-radius: 20vw;
+	bottom: 18vw;
+	right: 6vw;
+}
+
+.order {
+	padding-left: 1vw;
+}
+.Settings img.order{
+ width: 6vw;
+ height: 6vw;
+}
+
+.section-header {
+	height:6vw;
+}
+.section-header h1{
+	margin: 0px;
+	margin-top: 1vw;
+	height: 6vw;
+	width: 65vw;
+	font-family: BalooRegular;
+}

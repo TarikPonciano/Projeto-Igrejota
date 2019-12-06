@@ -1,0 +1,106 @@
+@font-face{
+  font-family: BalooRegular;
+  src: url("../../fonts/Baloo-Regular.ttf");
+}
+@font-face{
+  font-family: Pridi;
+  src: url("../../fonts/Pridi-Regular.ttf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: PridiBold;
+  src: url("../../fonts/Pridi-SemiBold.ttf");
+}
+@font-face{
+  font-family: Lateef;
+  src: url("../../fonts/LateefRegOT.ttf");
+}
+h1{ 
+	font-size: 10vw;
+	font-family: BalooRegular;
+	color:	#294D60;
+	margin: 0vw;
+	margin-top: 2vw;
+}
+.jogoimg{
+	padding: 0vw;
+	margin: 0vw;
+	height:35vw;
+	border: solid 3px #BF6646;
+}
+.jogodet {
+	display: inline-block;
+	text-align: center;
+	margin-left:10.28vw;	
+}
+
+.jogodet h4{
+	border-left: solid 3px #BF6646;	
+	float:left;
+	margin: 0px;
+	padding-right: 2.36vw;
+	padding-left: 1vw;
+	font-size: 4.5vw;
+	font-family: Pridi;
+  	font-weight: bold;
+	color: black;
+}
+.jogo h3{
+	font-size: 6.5	vw;
+	font-family: Pridi;
+	color: #BF6646;
+	margin: 0px;
+	margin-top: 2vw;
+}
+.jogo p{
+    font-family: Pridi;
+    color: #000;
+    font-size: 3.5vw;
+    line-height: 5vw;
+    margin: 0;
+}
+.jogo a{
+	font-family: Lateef;
+	border-left: solid 3px #BF6646;	
+	font-size: 4.5vw;
+	margin: 0;
+	padding-left: 2vw;
+}
+
+.jogo a.edit {
+	margin-top: 1vw;
+	border-left: solid 0px;
+}
+
+.edit img.icon{
+      float: left;
+    width: 10vw;
+    height: 10vw;
+    padding-right: 2vw;
+    padding-top: 3vw;
+}
+
+.icon{
+	display: block;
+	float: left;
+    background-repeat: no-repeat;
+    background-size: 6vw 6vw;
+    width:6vw;
+    height:6vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    border: solid 0;
+    opacity: 1;
+}
+
+.centro{
+    background-color: #345;
+    justify-content: center;
+    text-align: center;
+    padding: 2vw;
+}
+
+.highlight {
+	width: 9vw;
+    height: 6vw;
+}

@@ -1,0 +1,125 @@
+@font-face{
+  font-family: BalooRegular;
+  src: url("../../fonts/Baloo-Regular.ttf");
+}
+@font-face{
+  font-family: Pridi;
+  src: url("../../fonts/Pridi-Regular.ttf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: PridiBold;
+  src: url("../../fonts/Pridi-SemiBold.ttf");
+}
+@font-face{
+  font-family: Lateef;
+  src: url("../../fonts/LateefRegOT.ttf");
+}
+
+h2 {
+  font-family: BalooRegular;
+  color: #294D60;
+  font-size: 4vw;
+}
+
+.icon-news {
+
+}
+
+.icon-list-item {
+	float: left;
+	padding-top: 0;
+	padding-right: 2vw;
+}
+
+.noticias {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.noticias li {
+	height: 10vw;
+	padding-top: 3vw;
+}
+
+.noticias li:hover{
+	background-color: #EFE0D0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.listico{
+	margin-top: 2.5vw;
+	width: 2.5vw;
+	height: 2.5vw;
+	float:left;
+}
+
+.redux {
+	width: 71vw;
+	float: left;
+}
+
+
+h1{
+  font-family: BalooRegular;
+}
+
+.noticia-info h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 4vw;
+	font-weight: bold;
+	color: #294D60;
+}
+
+.noticia-info h5 {
+	margin-top: 1vw;
+	font-size: 2.9vw;
+	font-weight: normal;
+	color: #727176;
+	margin-bottom: 0;
+}
+
+a.not .notnome{
+	font-family: PridiBold;
+	height: 10vw;
+  	color:	#294D60;
+	float: left;
+	margin: 0px;
+	margin-left: 2vw;
+	padding: 0px;
+	width: 55vw;
+	font-size: 4.2vw;
+  	display: block;
+  	line-height: 4.5vw;
+}
+a.not .nottime{
+  	font-family: Pridi;
+	height: 10vw;
+  	color:	#555;
+	float: right;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+	width: 15vw;
+	font-size: 2.5vw;
+  	line-height: 4.5vw;
+  	display: block;
+}
+li a img {
+    width: 6vw;
+}
+
+a img {
+    width: 25vw;
+}
+.add-item img{
+    width: 20vw;
+    position: fixed;
+    border-radius: 20vw;
+    bottom: 18vw;
+    right: 6vw;
+}

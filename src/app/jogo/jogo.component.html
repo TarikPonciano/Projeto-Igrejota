@@ -1,0 +1,52 @@
+<div class="section-header">
+	<h1>JOGOS</h1>
+</div>
+<hr class="section-line">
+<ul class="jogos">
+	<div class="busca">
+		<button (click)="pesquisaAvancada(termoBusca)" class="searchbtn">🔍</button><input type="text" [(ngModel)]="termoBusca" placeholder="Pesquisar..."><button (click)="limparBusca()">Limpar</button>
+	</div>
+	<div class= "Settings">
+		<img src="../../assets/organização.png" alt="Organização: ">
+		<select (change)="organizar()" [(ngModel)]="metodoOrganizacao">
+		  <option selected="selected" value="A-Z">A-Z</option>
+		  <option value="Min. Jogadores">Min. Jogadores</option>
+		  <option value="Max. Jogadores">Max. Jogadores</option>
+		  <option value="Tempo de Jogo">Tempo de Jogo</option>
+		</select>
+		<button (click)="toggleInverter()"  class="Invbtn"><img *ngIf="!inverterOrdem" class="order" src="../assets/down.png" alt="Crescente"><img *ngIf="inverterOrdem" class="order" src="../assets/up.png" alt="Decrescente"></button>
+		<button (click)="toggleFiltros()" class="PAbtn"><p class="picon">🔍</p><p class="ptext">Pesquisa<br/>Avançada</p></button><br>
+	</div>
+	<div class="filtros" *ngIf="mostrarFiltros">
+		<button (click)="limparFiltros()">Limpar</button>
+		<h3>Número de Jogadores: {{ ignorarJogadores || numeroJogadores === -1 ? 'Qualquer um' : (numeroJogadores > 30 ? '30+' : numeroJogadores) }}</h3>
+		<div *ngIf="!ignorarJogadores">
+			<input [(ngModel)]="numeroJogadores" type="range" min="1" max="31" step="1" value="{{numeroJogadores}}"><br>
+		</div>
+		<input type="checkbox" [(ngModel)]="ignorarJogadores"> <p>Ignorar número de jogadores</p><br>
+
+		<h3>Tempo de Jogo: {{ ignorarTempoJogo || tempoJogo === -1 ? 'Qualquer um' : (tempoJogo < 10 ? "< 10 minutos" : (tempoJogo > 600) ? "> 10 horas" : tempoJogo+' minutos') }}</h3>
+		<div *ngIf="!ignorarTempoJogo">
+			<input [(ngModel)]="tempoJogo" type="range" min="0" max="610" step="10" value="{{tempoJogo}}"><br>
+		</div>
+		<input type="checkbox" [(ngModel)]="ignorarTempoJogo"> <p>Ignorar tempo de jogo</p><br>
+
+		<h3>Categorias</h3>
+		<app-categoria-select></app-categoria-select>
+		<button (click)="pesquisaAvancada(termoBusca)">Aplicar</button>
+	</div>
+	<h3 *ngIf="!jogos || jogos.length <= 0">{{loaded ? "Jogos não encontrados!" : "Carregando jogos..."}}<br>{{loaded ? "Tente escolher outros termos ou filtros" : ""}}</h3>
+	<li *ngFor="let jogo of jogos" [class.selected]="jogo === jogoSelecionado" (click)="onSelect(jogo)">
+		<a routerLink="{{ '/jogo/'+jogo.id }}" (click)="messageService.clear()">
+			<div class="iconeJogo"><img class="iconeJogo" src="{{ jogo.imagemJogo ? jogo.imagemJogo : 'capa/default.png' }}" alt=""></div>
+			<div class="jogoinfo">
+				<h3>{{ jogo.nome | uppercase }} <img *ngIf="jogo.emDestaque" src="../../assets/game.png" alt="Em Destaque" class="dico" ></h3><br/>
+				<h4><img class="tico" src="../../assets/time.png" alt="Tempo: ">{{ jogo.tempoJogo+'min'}}</h4>
+				<h4><img class="pico" src="../../assets/players.png" alt="Jogadores: ">{{(jogo.minJogadores !== jogo.maxJogadores ? jogo.minJogadores+' a ' : '') + (jogo.maxJogadores > 30 ? "30+" : jogo.maxJogadores)+' jogadores' | lowercase }}</h4>
+				<h4 *ngFor="let categoria of jogo.categorias" class="cat">{{ categoria.nome }}</h4>
+			</div>
+		</a>
+		<a routerLink="{{ '/jogo/edit/'+jogo.id }}" *ngIf="auth.loggedIn()" (click)="messageService.clear()"><img class="edit-pencil" alt="Editar" src="../assets/edititem.png"></a>
+	</li>
+</ul>
+<a class="add-item" routerLink="/jogo/edit/-1" *ngIf="auth.loggedIn()" (click)="messageService.clear()"><img src="../assets/addjogo.png" alt="Adicionar"></a>

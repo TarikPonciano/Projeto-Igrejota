@@ -1,0 +1,113 @@
+@font-face{
+  font-family: BalooRegular;
+  src: url("../../fonts/Baloo-Regular.ttf");
+}
+@font-face{
+  font-family: Pridi;
+  src: url("../../fonts/Pridi-Regular.ttf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: PridiBold;
+  src: url("../../fonts/Pridi-SemiBold.ttf");
+}
+@font-face{
+  font-family: Lateef;
+  src: url("../../fonts/LateefRegOT.ttf");
+}
+
+.login{
+	background-color: #000000aa;
+	text-align: center;
+	display:block;
+	justify-content: center;
+  left: 0;
+  right: 0;
+  padding-top: 25vh;
+  padding-bottom: 45vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+	font-family: Pridi;
+	font-size: 4vw;
+	color: #EFE0D0;
+  position: absolute;
+}
+
+.login div{
+  background-color: #294D60;
+  min-height: 40vw;
+}
+
+.login input {
+    margin-bottom: 4vw;
+    padding-left: 2vw;
+    border: .5vw solid #be6646;
+    border-radius: 2vw;
+    font-size: 3.5vw;
+    width: 50vw;
+    height: 4vw;
+    color: #df704a;
+}
+
+input [type=text]{
+}
+
+.login button,.gp button{
+    color:#EFE0D0;
+    background-color:#D06636;
+    border:none;
+	  font-size: 7vw;
+	  font-family: BalooRegular;
+    border-radius: 4.5px;
+    display: inline-flex;
+    padding:1vw;	
+    padding-right:2vw;
+    padding-left:2vw;	
+    transition: color 0.2s, background-color 0.2s;
+	  margin-bottom:4vw;
+}
+
+.login button:hover, .gp button:hover{
+    color:#D06636;
+    background-color:#EFE0D0;
+}
+
+.gp button{
+  font-size: 6vw;
+}
+
+.login h1 {
+  font-size: 8vw;
+}
+
+.login h1, h2 {
+	font-family: PridiBold;
+  margin: 0;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.gp h1, h2 {
+  font-family: PridiBold;
+  margin: 0;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  overflow-wrap: break-word;
+}
+
+.gp{
+  text-align: center;
+  margin-top:5vw;
+}
+
+.gp h1 {
+  margin-bottom: 2vw;
+  font-size: 6vw;
+  color: #DF704A;
+}
+
+.gp h2 {
+  margin-bottom: 2vw;
+  font-size: 4vw;
+  color: #294D60;
+}

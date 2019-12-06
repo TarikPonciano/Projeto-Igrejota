@@ -1,0 +1,9 @@
+<ul class="categorias">
+	<h1 *ngIf="!loaded">Carregando categorias...</h1>
+	<li *ngFor="let categoria of categorias">
+		<label class="checkboxcontainer"> {{ categoria.nome }}
+			<input type="checkbox" [checked]="categoriaChecada(categoria)" (click)="toggleCategoria(categoria)">
+			<span class="checkmark"></span>
+		</label>
+	</li>
+</ul>

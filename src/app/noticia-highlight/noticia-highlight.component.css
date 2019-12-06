@@ -1,0 +1,118 @@
+h2 {
+  font-family: BalooRegular;
+  color: #294D60;
+  font-size: 4vw;
+}
+
+.highlight {
+    margin-top: 5vw;
+    height: 55vw;
+    background-color: #f0f0f1;
+    text-align: center;
+}
+
+.highlight img {
+	max-width: 90.56vw;
+	max-height: 55.2vw;
+}
+
+.highlight h3 {
+    position: absolute;
+    width: 88.2%;
+    top: 44.5vw;
+    height: 12.5vw;
+    line-height: 12.5vw;
+    background-color: #00000077;
+    color: #f0f0f1;
+    font-size: 3vw;
+    padding-left: 2vw;
+    font-weight: 400;
+    font-family: Pridi;
+}
+
+.noticias {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.noticias li {
+    width: 85.56vw;
+    display: inline-block;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+.noticias li:hover {
+    background-color: #ffeadd;
+}
+.news-container {
+	float: left;
+	width: 25.3vw;
+	height: 13.2vw;
+	background-color: #605A5777;
+	text-align: center;
+}
+
+.news-image {
+	padding-top: 0;
+	max-width: 25.3vw;
+	max-height: 13.2vw;
+}
+
+.redux {
+	width: 55vw;
+}
+
+.noticia-info {
+	float: left;
+	margin-left: 2vw;
+	max-width: 63vw;
+}
+
+a a img {
+    width: 8vw;
+    position: absolute;
+    top: 50vw;
+    right: 6vw;
+}
+.noticia-info h3 {
+  font-family: Pridi;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #294d60;
+	font-weight: bold;
+	font-size: 3.5vw;
+}
+
+.noticia-info h5 {
+  font-family: Pridi;
+  margin-top: 0vw;
+	margin-bottom: 0;
+	color: #727176;
+	font-weight: normal;
+	font-size: 2.5vw;
+}
+
+.noticia-info p {
+	margin-top: 1vw;
+	margin-bottom: 0;
+	color: #000;
+	font-weight: normal;
+	font-size: 2.5vw;
+}
+
+a.edit-item img{
+	width: 9vw;
+    position: absolute;
+    right: 0.5vw;
+}
+a.add-item img {
+	width: 20vw;
+	position: fixed;
+	border-radius: 20vw;
+	bottom: 18vw;
+	right: 6vw;
+}

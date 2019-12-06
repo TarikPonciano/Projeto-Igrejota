@@ -1,0 +1,104 @@
+@font-face{
+  font-family: BalooRegular;
+  src: url("../../fonts/Baloo-Regular.ttf");
+}
+@font-face{
+  font-family: Pridi;
+  src: url("../../fonts/Pridi-Regular.ttf");
+  font-weight: bold;
+}
+@font-face{
+  font-family: PridiBold;
+  src: url("../../fonts/Pridi-SemiBold.ttf");
+}
+@font-face{
+  font-family: Lateef;
+  src: url("../../fonts/LateefRegOT.ttf");
+}
+.message {
+	margin-left: -4.72vw;
+	width: 100vw;
+	height: 7vw;
+	position: fixed;
+	top: 14.72vw;
+	left: 4.72vw;
+	bottom: 15.41vw;
+	right: 0;
+}
+
+.mes{
+}
+
+.clear {
+	position: absolute;
+	left: 83vw;
+	width: 17vw;
+	height: 7.8vw;
+	font-size: 4vw;
+	background-color: #00A6C4;
+	color: #EEDFCF;
+	border: 0.5vw solid #00A6C4;
+}
+
+.clear:hover{
+	background-color: #EEDFCF; 
+	color:#000;
+}
+
+.message-text {
+  	font-family: Pridi;
+	color: #F0F1F6;
+	padding-left: 4vw;
+	padding-top: 1.5vw;
+	font-size: 4vw;
+	height: 5.5vw;
+	line-height: 4vw;
+	background-color: #004C60;
+	border: 0.5vw solid #00A6C4;
+}
+
+.overlay {
+	position: fixed;
+	top: 14.72vw;
+	left: 0;
+	bottom: 15.41vw;
+	right: 0;
+	z-index: 20;
+	background-color: #F0F0F177;
+}
+
+.alert-dialog {
+	background-color: #284E60;
+	border: 0.5vw solid #284E60;
+	border-radius: 2vw;
+	color: #EEDFCF;
+	margin-top: 50vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	width: 40vw;
+    margin-left: 25vw;
+	height: 40vw;
+}
+
+.alert-dialog p {
+	font-size: 5vw;
+	font-weight: bold;
+}
+
+.options {
+	color: #EEDFCF;
+	font-size: 5vw;
+	border-radius: 2vw;
+	border: none;
+	width: 15vw;
+}
+
+.yes {
+	background-color: #BE6646;
+	margin-right: 5vw;
+}
+
+.no {
+	background-color: #00A6C4;
+	margin-left: 5vw;
+}

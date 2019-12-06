@@ -1,0 +1,33 @@
+.screen {
+
+}
+
+app-topbar {
+	top: 0;
+	position: sticky;
+	width: 100vw;
+}
+
+.page-content {
+	background-color: #fff;
+	position: fixed;
+	top: 14.72vw;
+	bottom: 15.41vw;
+	padding-right: 4.72vw;
+    padding-left: 4.72vw;
+	width: 90.56vw;
+	overflow-y: scroll;
+}
+
+router-outlet {
+	width: 100vw;
+}
+
+app-bottom {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 15.41vw;
+}

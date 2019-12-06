@@ -1,0 +1,57 @@
+@font-face{
+  font-family: BalooRegular;
+  src: url("../../fonts/Baloo-Regular.ttf");
+}
+.tab-menu-mobile   ul {
+  width: 100vw;
+  bottom: 0;
+  padding-left: 0;
+  margin: 0;
+  display: inline-flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+footer {
+  width: 100vw;
+  height: 15.41vw;
+  display: flex;
+}
+
+.unselected {
+  color: #FFEADD;
+  font-weight: lighter;
+}
+
+.selected {
+  color: #A0B6C4;
+}
+
+.tab-menu-mobile   button {
+  width: 33.33vw;
+  height: 15.41vw;
+  padding-right: 2.36vw;
+  padding-left: 2.36vw;
+  padding-top: 2.18vw;
+  text-align: center;
+  font-size: 3.5vw;
+  font-family: BalooRegular;
+  line-height: 1em;
+  border: none;
+  background-color: #00A6C4;
+  transition: background-color 0.2s;
+}
+.tab-menu-mobile   button:hover {
+  background-color: #294D60;
+}
+br{
+  letter-spacing: 0px;
+  word-spacing: 0px;
+}
+
+.tab-icon {
+  max-width: 8vw;
+  max-height: 8vw;
+  margin-bottom:0px;
+  padding:0px;
+}

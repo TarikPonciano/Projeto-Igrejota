@@ -1,0 +1,25 @@
+<div class="tab-menu-mobile">
+	<header>
+		<button *ngIf="validReturn()" (click)="goBack()" class="back-button"><img class="login-icon" src="../assets/back.png" alt=""></button>
+		<h1>Igrejota</h1>
+		<button class="login-button" (click)="toggleMenu()"><img *ngIf="!mostrarMenu" class="login-icon" src="../assets/header.png" alt="Menu"><img *ngIf="mostrarMenu" class="login-icon" src="../assets/header2.png" alt="Menu"></button>
+	</header>
+	<div class="dropdown-menu" *ngIf="mostrarMenu">
+		<ul *ngIf="auth.loggedIn()">
+			<li>
+				<h3 class="menu-item-mobile">{{" "+auth.getLoggedUser() | uppercase }}</h3>
+			</li>
+			<li>
+				<button class="menu-item-mobile" (click)="goToGerenciarPerfil()">Gerenciar Perfil</button>
+			</li>
+			<li>
+				<button class="menu-item-mobile" (click)="goToGerenciarApp()">Gerenciar Categorias</button>
+			</li>
+			<li>
+				<button class="menu-item-mobile sair" (click)="sair()">Sair</button>
+			</li>
+		</ul>
+		<app-login *ngIf="!auth.loggedIn()"></app-login>
+	</div>
+</div>
+<app-messages></app-messages>

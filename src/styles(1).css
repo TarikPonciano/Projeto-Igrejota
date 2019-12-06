@@ -1,0 +1,255 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+body{	
+	margin: 0px;
+    background-color: #fff;
+}
+
+::placeholder {
+	color: #BE6646;
+	opacity: 0.2;
+}
+
+:-ms-input-placeholder {
+	color: #BE6646;
+}
+
+::ms-input-placeholder {
+	color: #BE6646;
+}
+
+.no-wrap {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
+  	justify-content: center;
+}
+
+.selected {
+  background-color: #00A6C4 !important;
+  color: #294D60;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.section-header {
+	display: inline-flex;
+	padding-top: 5vw;
+	color: #BE6646;
+	font-size: 3.1vw;
+	height: 12vw;
+	font-weight: bolder;
+}
+
+.section-header h1 {
+	padding-left: 3.1vw;
+	width: 68.8vw;
+}
+
+.section-line {
+	border: none;
+    height: 1.3vw;
+	background-color: #BE6646;
+	margin: 0;
+}
+
+.section-icon {
+	padding-top: 2vw;
+	max-width: 9.3vw;
+	max-height: 9.3vw;
+}
+
+.input-search {
+	background-color: transparent;
+}
+
+.highlight-line {
+	float: left;
+	width: 0.5vw;
+	height: 5vw;
+	background-color: #BE6646;
+	margin-right: 1vw;
+}
+
+.edit-item img {
+	max-width: 8vw;
+	max-height: 8vw;
+}
+
+.add-item {
+	padding-top: 20vw;
+}
+
+.add-item img {
+	position: fixed;
+	left: 75.3vw;
+	top: 141.1vw;
+	font-size: 6vw;
+	border-radius: 9.15vw;
+	width: 18.3vw;
+	height: 18.3vw;
+	background-color: #BE6646;
+	color: #F0F1F6;
+}
+
+.alert-danger {
+	color: #BE6646;
+}
+
+.checkboxcontainer {
+  display: block;
+  position: relative;
+  padding-left: 6vw;
+  margin-top: 4vw;
+  padding-top: 1vw;
+  margin-bottom: 1.7vw;
+  cursor: pointer;
+  font-size: 3vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4vw;
+  width: 4vw;
+  border: 0.5vw solid #284E60;
+  border-radius: 1vw;
+  background-color: #F0F1F6;
+}
+
+.checkboxcontainer:hover input ~ .checkmark {
+  border: 0.5vw solid #284E60;
+  background-color: #F0F1F6;
+}
+
+.checkboxcontainer input:checked ~ .checkmark {
+  border: 0.5vw solid #284E60;
+  background-color: #284E60;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxcontainer .checkmark:after {
+  left: 1.2vw;
+  top: 0.2vw;
+  width: 1vw;
+  height: 2vw;
+  border: solid white;
+  border-width: 0 0.6vw 0.6vw 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.slidecontainer {
+    width: 90.56vw;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 1.5vw;
+    background: #F6A971;
+    outline: none;
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 4.5vw;
+    height: 6vw;
+    background: #BE6646;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 4.5vw;
+    height: 6vw;
+    background: #BE6646;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 0.1vw;
+    height: 0.1vw;
+    padding: 0;
+    margin: -0.1vw;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.file-input {
+    background-color: #00A6C4;
+    border-radius: 1vw;
+    color: #F0F1F6;
+    display: inline-block;
+    padding: 0.8vw 1.6vw;
+    cursor: pointer;
+    font-weight: normal;
+	font-size: 3vw;
+	font-weight: bold;
+}
+
+.actions {
+	height: 6vw;
+}
+
+.cancel, .delete, .save {
+	background-color: #00A6C4;
+	border-radius: 2vw;
+	font-size: 4vw;
+	height: 6vw;
+	width: 20vw;
+	font-weight: bold;
+	border: none;
+	color: #F0F1F6;
+}
+
+.cancel, .delete {
+	float: left;
+	background-color: #BE6646;
+}
+
+.save {
+	float: right;
+}
+
+.text-input {
+	border: 0.5vw solid #BE6646;
+	border-radius: 2vw;
+	border-color: #BE6646;
+	padding-left: 1vw;
+	width: 88vw;
+	font-size: 4vw;
+	color: #BE6646;
+}

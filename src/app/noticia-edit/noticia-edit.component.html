@@ -1,0 +1,28 @@
+<div *ngIf="noticia">
+	<h1>{{id === -1 ? "Nova " : "Editar "}} Notícia</h1>
+	<div *ngIf="sentRequest === false" class="actions">
+		<button *ngIf="noticia.id === -1" class="delete" (click)="onCancel()">Cancelar</button>
+		<button *ngIf="noticia.id !== -1" class="delete" (click)="onDelete()">Deletar</button>
+		<button class="save" (click)="onSave()">Salvar</button>
+	</div>
+	<label>
+		<h2>Título da Notícia:</h2> <input class="text-input" [(ngModel)]="noticia.titulo" maxlength="150" placeholder="Título" value="{{noticia.titulo}}">
+		<div *ngIf="noticia.titulo === '' && enviado" class="alert-danger">
+			É necessario um título para a notícia.
+		</div>
+	</label><br>
+	<label>
+		<h2>Descrição:</h2>
+		<textarea class="text-input" rows="20" cols="100" maxlength="2000" [(ngModel)]="noticia.conteudo" type="textarea" placeholder="Descrição">{{noticia.conteudo}}</textarea>
+		<div *ngIf="noticia.conteudo === '' && enviado" class="alert-danger">
+			É necessario uma descrição.
+		</div>
+	</label><br>
+	<label>
+		<h2>Imagem Escolhida</h2> 
+		<div class="file-input">Escolher Imagem</div>
+		<input (change)="update(noticia, $event)" type="file" accept="image/gif, image/jpeg, image/png">
+	</label>
+</div>
+<h1 *ngIf="!loaded">Verificando...</h1>
+<app-page-not-found *ngIf="loaded && !noticia"></app-page-not-found>

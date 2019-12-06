@@ -1,0 +1,13 @@
+<ul class="categorias">
+	<button class="save" (click)="saveAll()">Salvar Alterações</button>
+	<h1 *ngIf="!loaded">Carregando...</h1>
+	<li *ngFor="let categoria of categorias">
+		<input type="text" maxlength="100" [(ngModel)]="categoria.nome" value="{{ categoria.nome }}" placeholder="Categoria">
+		<div *ngIf="categoria.nome === '' && enviado" class="alert-danger">
+			E necessário um nome para a categoria.
+		</div>
+		<p>{{ categoria.id === -1 ? "Nova" : categoria.id }}</p>
+		<button class="delete" (click)="onDelete(categoria)">Deletar</button><br>
+	</li>
+	<button class="save" (click)="addCategoria()">Nova Categoria</button><br>
+</ul>

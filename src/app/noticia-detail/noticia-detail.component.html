@@ -1,0 +1,13 @@
+<div class="noticia" *ngIf="noticia">
+	<a class="edit-item" *ngIf="auth.loggedIn()" routerLink="{{'/noticia/edit/'+noticia.id}}" (click)="messageService.clear()"><img src="../assets/edititem.png" alt=""></a>
+	<h1 [class.redux]="auth.loggedIn()">{{ noticia.titulo }}</h1>
+	<h4 *ngIf="noticia.dataEdicao && noticia.dataEdicao !== noticia.dataCriacao">
+		Ultima edição {{ noticia.dataEdicao.fromNow() }}
+	</h4>
+	<div class="centro">
+		<img class="center" src="{{ noticia.imagemDestaque ? noticia.imagemDestaque : 'capa/default.png' }}" alt="{{noticia.titulo}}"><br></div>
+	<h5>Criado em {{ noticia.dataCriacao.format('LLL') }}</h5>
+	<p>{{ noticia.conteudo }}</p>
+</div>
+<h1 *ngIf="!loaded">Carregando notícia...</h1>
+<app-page-not-found *ngIf="loaded && !noticia"></app-page-not-found>

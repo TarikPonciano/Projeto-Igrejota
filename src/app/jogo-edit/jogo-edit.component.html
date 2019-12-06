@@ -1,0 +1,66 @@
+<div *ngIf="jogo">
+	<h1>{{ jogo.id === -1 ? "Novo " : "Editar "}} Jogo</h1>
+	<div *ngIf="sentRequest === false" class="actions">
+		<button *ngIf="jogo.id === -1" class="delete" (click)="onCancel()">Cancelar</button>
+		<button *ngIf="jogo.id !== -1" class="delete" (click)="onDelete()">Deletar</button>
+		<button class="save" (click)="onSave()">Salvar</button>
+	</div>
+	<label>
+		<h2>Nome do Jogo: </h2><input class="text-input small" [(ngModel)]="jogo.nome" maxlength="180" placeholder="Nome" value="{{jogo.nome}}">
+	</label>
+	<div *ngIf="jogo.nome === '' && enviado" class="alert-danger">
+		É necessario um nome para o jogo.
+	</div>
+	<label>
+		<label class="checkboxcontainer">Em destaque
+			<input type="checkbox" [(ngModel)]="jogo.emDestaque" [checked]="jogo.emDestaque">
+			<span class="checkmark"></span>
+		</label>
+	</label>
+	<label>
+		<h2>Número de jogadores: {{ (jogo.minJogadores !== jogo.maxJogadores ? jogo.minJogadores+' a ' : '') + (jogo.maxJogadores > 30 ? "30+" : jogo.maxJogadores)}}</h2>
+		<ion-range-slider #sliderJogadores type="number" min="1"
+          max="30"
+          [from]="jogo.minJogadores"
+          from_shadow="true"
+          [to]="jogo.maxJogadores"
+          to_shadow="true"
+          grid="true"
+          grid_num="15"
+          postfix=" jogadores"
+          (onFinish)="adjustNumeroJogadores(sliderJogadores.from,sliderJogadores.to)"></ion-range-slider>
+          <label class="checkboxcontainer">Mais de 30 jogadores
+          	<input type="checkbox" [(ngModel)]="maisDe30" (change)="adjustNumeroJogadores(sliderJogadores.from,sliderJogadores.to)"><span class="checkmark"></span>
+          </label>
+	</label><br>
+	<label>
+		<h2>Categorias:</h2>
+		<app-categoria-select></app-categoria-select>
+	</label><br>
+	<label>
+		<h2>Tempo de Jogo: {{ jogo.tempoJogo < 5 ? "< 5" : (jogo.tempoJogo > 600) ? "600+" : jogo.tempoJogo }} minutos</h2>
+		<div class="slidecontainer">
+			<input class="slider" [(ngModel)]="jogo.tempoJogo" type="range" min="0" max="610" step="10" value="{{jogo.tempoJogo}}">
+		</div>
+	</label><br>
+	<label>
+		<h2>Descrição:</h2> <textarea class="text-input large" rows="20" cols="100" maxlength="2000" [(ngModel)]="jogo.descricao" placeholder="Descrição">{{jogo.descricao}}</textarea>
+	</label>
+	<div *ngIf="jogo.descricao === '' && enviado" class="alert-danger">
+		É necessário uma descrição.
+	</div>
+	<br>
+	<label>
+		<h2>{{ (jogo.imagemJogo ? "Substituir" : "Adicionar") + " Capa do Jogo:" }}</h2>
+		<div class="file-input">Escolher Imagem</div>
+		<input (change)="update(jogo, $event)" type="file" accept="image/gif, image/jpeg, image/png">
+	</label>
+	<label>
+		<h2>Link do Manual:</h2> <input class="text-input" [(ngModel)]="jogo.linkManual" maxlength="200" placeholder="Link do Manual" value="{{jogo.linkManual ? jogo.linkManual : ''}}">
+	</label>
+	<label>
+		<h2>Link útil:</h2> <input class="text-input" [(ngModel)]="jogo.linkDesenvolvedor" maxlength="200" placeholder="Link útil" value="{{jogo.linkDesenvolvedor ? jogo.linkDesenvolvedor : ''}}">
+	</label>
+</div>
+<h1 *ngIf="!loaded">Verificando...</h1>
+<app-page-not-found *ngIf="loaded && !jogo"></app-page-not-found>

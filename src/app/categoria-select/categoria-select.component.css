@@ -1,0 +1,49 @@
+.categorias {
+	list-style-type: none;
+	display: inline-block;
+	padding-left: 0;
+}
+
+.categorias li {
+	float: left;
+}
+
+.categorias label {
+	margin-top: 0;
+	font-family: Pridi;
+	padding-bottom: 1vw;
+	padding-right: 1vw;
+	padding-top: 1vw;
+	width: 23vw;
+	font-family: Pridi;
+    border-left: 2px solid #df704a;
+    font-size: 4vw;
+    padding-left: 1vw;
+    margin-top: 1.5vw;
+    transition: background-color 0.5s ease;
+}
+.categorias label:hover {
+	background-color: #FFEADD;
+}
+
+.categorias input {
+    background: #fff;
+    border: 3px solid #294d60;
+    border-radius: 1vw;
+    width: 5vw;
+    position: relative;
+    top: 1.5vw;
+    height: 5vw;
+    transition: background-color 0.5s, color 0.5s, border-radius 0.5s;
+    -webkit-appearance: inherit;
+}
+
+.categorias input:checked{
+	background-color: #F7AA71;
+    border: 3px solid #294d60;
+    border-radius: 10vw;
+}
+
+.categorias input:hover{
+    border-radius: 5vw;
+}

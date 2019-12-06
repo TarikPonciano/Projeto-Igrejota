@@ -1,0 +1,87 @@
+button.save {
+    font-family: BalooRegular;
+    line-height: 3.1vw;
+    width: 77.56vw;
+    font-size: 5vw;
+    height: 10vw;
+    margin: 1vw;
+    background-color: #294d60;
+    border: 0 solid;
+    border-radius: 5vw;
+    transition: background-color .2s,color .2s;
+    color: #ffeadd;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.categorias {
+    list-style-type: none;
+    margin-top: 8vw;
+    padding:5vw;
+}
+
+p {
+    float: left;
+    margin: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+input {
+    float: left;
+    border: .5vw solid #df704a;
+    border-radius: 2vw;
+    font-size: 3.5vw;
+    display: inline-block;
+    color: #df704a;
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+    margin-left: 2vw;
+    width: 73vw;
+}
+
+button.delete {
+    font-family: BalooRegular;
+    line-height: 3vw;
+    font-size: 3vw;
+    height: 5vw;
+    margin: 0 1vw 0 0;
+    background-color: #00a6c4;
+    border: 0 solid;
+    border-radius: 2vw;
+    transition: background-color .2s,color .2s;
+    color: #ffeadd;
+    float: right;
+}
+
+button.delete:hover, button.save:hover {
+    background-color: #f7aa71;
+    color: black;
+}
+
+.categorias li {
+    font-family: Pridi;
+    border-left: 2px solid #df704a;
+    font-size: 3vw;
+    height: 12vw;
+    text-align: center;
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+    width: 78vw;
+    display: block;
+}
+
+.categorias li:hover {
+    background-color: #ffeadd;
+}
+
+h1 { 
+    font-size: 10vw;
+    font-family: BalooRegular;
+    color:  #294D60;
+    margin: 0vw;
+    margin-top: 2vw;
+}

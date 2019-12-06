@@ -1,0 +1,204 @@
+.form-group {
+	width: 100%;
+}
+
+.calendário {
+    background-color: #00A7C5;
+    padding: 2vw;
+    border-radius: 2vw;
+}
+.calendário h3 {
+    text-align: center;
+    font-family: BalooRegular;
+    background-color: #294D60;
+    color: #ffeadd;
+    margin: 2vw;
+    padding: 2vw;
+    border-radius: 2vw;
+}
+.alert.alert-info {
+    width: 80vw;
+    font-family: Pridi;
+    background-color: #ffeadd;
+    margin: 0vw;
+    margin-bottom: 2vw;
+    text-align: center;
+    padding: 1vw;
+    display: inline-grid;
+    border-radius: 2vw;
+}
+.cal-month-view .cal-days .cal-cell-row * {
+    border: none !important;
+}
+.alert.alert-info button {
+    font-family: BalooRegular;
+    line-height: 3.1vw;
+    font-size: 3vw;
+    margin: 2vw 0 0 0;
+    background-color: #294d60;
+    border: 0 solid;
+    padding: 1vw;
+    border-radius: 2vw;
+    transition: background-color .2s,color .2s;
+    color: #ffeadd;
+    float: right;
+}
+.cal-month-view .cal-day-badge * {
+    display: none !important;
+}
+.alert.alert-info button:hover {
+    background-color: #df704a;
+    color: #000;
+}
+.cal-month-view .cal-days * {
+    border: none !important; 
+}
+.cal-month-view .cal-days .cal-cell-row * {
+    border: none !important;
+}
+.cal-month-view .cal-days .cal-cell-row:hover * {
+    background-color: transparent !important;
+}
+.cal-month-view .cal-day-cell * {
+    min-height: 12vw !important;
+}
+span.cal-day-number * {
+    font-size: 3vw !important;
+}
+.cal-month-view .cal-day-cell.cal-today .cal-day-number * {
+    font-size: 5.5vw !important;
+}
+.cal-month-view .cal-day-number * {
+    opacity:1 !important;
+    font-family: Pridi !important;
+}
+.cal-cell-row.cal-header * {
+    height: 7vw !important;
+    margin-bottom: 1.5vw !important;
+}
+.cal-days .cal-cell-row:hover * {
+    background-color: transparent !important;
+}
+.cal-cell-row.cal-header:hover * {
+    background-color: transparent !important;
+}
+.cal-cell-row.cal-header .cal-cell * {
+    font-size: 4vw !important;
+    background-color: #df704a !important;
+    border-radius: 2vw !important;
+    margin-right: .5vw !important;
+    height: 5vw !important;
+    color: #ffeadd !important;
+    margin-left: .5vw !important;
+    padding: 0vw !important;
+    padding-bottom: 1.5vw !important;
+    padding-left: 1vw !important;
+    font-family: BalooRegular !important;
+}
+.cal-month-view .cal-day-cell .cal-day-number * {
+    color: #df704a !important;
+    float: left !important;
+    padding-left: 2vw !important;
+    margin: 0vw !important;
+    padding-top: 1vw !important;
+}
+.cal-month-view .cal-day-cell.cal-weekend .cal-day-number * {
+    color: #df704a !important;
+}
+.cal-month-view .cal-day-cell.cal-today .cal-day-number * {
+    font-size: 4.1vw!important;
+    font-family: BalooRegular !important;
+}
+.cal-month-view .cal-day-cell .cal-day-number * {
+    font-size: 4vw !important;
+}
+.cal-cell-row.cal-header .cal-cell * {
+    font-size: 4vw !important;
+    background-color: #df704a !important;
+}
+.cal-cell.cal-past.cal-day-cell * {
+    border: none !important;
+}
+.cal-cell * {
+    border-radius: 2vw !important;
+    margin: 0.5vw !important;
+    border: none !important;
+} 
+.cal-in-month.cal-cell * {
+    background-color: #fff !important;
+    color: #df704a !important;
+}
+.cal-month-view .cal-day-cell * {
+    min-height: 12vw !important;
+}
+
+.cal-out-month.cal-cell {
+    background-color: #294D60 !important;
+    opacity: .7 !important;
+}
+.cal-month-view .cal-day-cell.cal-out-month .cal-day-number * {
+    color: #00a6c4 !important;
+    opacity: 1 !important;
+}
+.cal-month-view .cal-day-cell.cal-today * {
+  background-color:#ffeadd !important;
+}
+.cal-month-view .cal-cell-row .cal-cell:hover * {
+      background-color: #e5e5e5 !important;
+}
+button.btn:hover {
+    background-color: #ffeadd;
+}
+button.btn {
+    width: 25vw;
+    text-align: center;
+    align-content: center;
+    margin: 0vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: #000;
+    background-color: #f6a971;
+}
+button {
+    width: 80vw;
+    border: none;
+    background-color: #00a6c4;
+    font-size: 5vw;
+    padding: 2vw;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 2vw;
+    color: #f0f1f6;
+    margin-bottom: 3vw;
+}
+button:hover {
+    background-color: #f6a971;
+    color: #000;
+}
+.form-adicionar-dia select {
+    font-family: BalooRegular;
+    background-color: #f7aa71;
+    border: 0 solid;
+    border-radius: 2vw;
+    margin-top: 0;
+    font-size: 4vw;
+    transition: background-color .2s,color .2s;
+}
+.form-adicionar-dia select:hover {
+    background-color: #000;
+    color: #ffeadd;
+}
+h3 {
+    font-family: Pridi;
+    font-size: 6vw;
+    margin: 1vw;
+    color: #294d60;
+}
+h4 {
+    font-family: Pridi;
+    font-size: 3.5vw;
+}
+h1 {
+    font-family: BalooRegular;
+    margin: 2vw;
+    color: #df704a;
+}

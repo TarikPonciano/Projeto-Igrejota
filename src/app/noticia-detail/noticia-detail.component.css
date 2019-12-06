@@ -1,0 +1,58 @@
+.noticia {
+	padding-top: 7.5vw;
+}
+
+.noticia .edit-item img {
+    width: 10vw;
+    height: 10vw;
+    padding-right: 2vw;
+    padding-top: 1vw;
+    float: left;
+}
+
+.noticia h1 {
+    margin: 0vw;
+    font-size: 5vw;
+    font-weight: 700;
+    font-family: PridiBold;
+    color: #294d60;
+}
+
+.noticia .centro{
+    background-color: #345;
+    text-align: center;
+    justify-content: center;
+}
+
+.noticia img {
+	max-height: 47.2vw;
+}
+
+.noticia h4 {
+    color: #727176;
+    font-size: 2.5vw;
+    margin: 0vw;
+    margin-bottom: 3vw;
+    font-weight: 400;
+    font-family: Pridi;
+}
+
+.noticia h5 {
+	color: #727176;
+    font-size: 2.5vw;
+    margin: 0vw;
+	font-weight: normal;
+    font-family: Pridi;
+}
+
+.noticia p {
+    font-family: Pridi;
+    color: #000;
+    font-size: 3.5vw;
+    line-height: 5vw;
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+}

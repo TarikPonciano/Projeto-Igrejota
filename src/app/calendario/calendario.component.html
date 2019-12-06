@@ -1,0 +1,93 @@
+<h1>{{ loaded ? "Calendário" : "Carregando..." }}</h1>
+<div class="calendário" *ngIf="loaded">
+<div class="row text-center">
+  <div class="col-md-4">
+    <div class="btn-group">
+      <button
+        class="btn btn-primary"
+        mwlCalendarPreviousView
+        [view]="view"
+        [(viewDate)]="viewDate"
+        (viewDateChange)="viewDateChange.next(viewDate); getEventos();">
+        Anterior
+      </button>
+      <button
+        class="btn btn-outline-secondary"
+        mwlCalendarToday
+        [(viewDate)]="viewDate"
+        (viewDateChange)="viewDateChange.next(viewDate); getEventos();">
+        Hoje
+      </button>
+      <button
+        class="btn btn-primary"
+        mwlCalendarNextView
+        [view]="view"
+        [(viewDate)]="viewDate"
+        (viewDateChange)="viewDateChange.next(viewDate); getEventos();">
+        Próximo
+      </button>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h3>{{ displayMonthYear(viewDate) | uppercase }}</h3>
+  </div>
+</div>
+<br>
+<div class="alert alert-info">
+  <strong *ngIf="clickedDate">Dia selecionado: {{ displayDate(clickedDate) }}</strong>
+  <button *ngIf="isIgrejotaDay" (click)="onDaySelect(clickedDate)">Ver Presenças</button>
+</div>
+<div [ngSwitch]="view">
+  <mwl-calendar-month-view
+    *ngSwitchCase="'month'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (dayClicked)="onDaySelect($event.day.date)">
+  </mwl-calendar-month-view>
+  <mwl-calendar-week-view
+    *ngSwitchCase="'week'"
+    [viewDate]="viewDate"
+    [events]="events"
+    (dayHeaderClicked)="clickedDate = $event.day.date">
+  </mwl-calendar-week-view>
+  <mwl-calendar-day-view
+    *ngSwitchCase="'day'"
+    [viewDate]="viewDate"
+    [events]="events">
+  </mwl-calendar-day-view>
+</div>
+</div>
+<div class="eventos" *ngIf="clickedDate">
+  <div *ngIf="loaded && eventosDiaIgrejota.length <= 0">
+    <h2>Sem eventos</h2>
+    <div *ngIf="auth.loggedIn()">
+      <h3>Deseja adicionar um novo?</h3>
+    </div>
+  </div>
+  <div *ngIf="!auth.loggedIn() || !openEditMode">
+    <h2 *ngIf="eventosDiaIgrejota.length > 0">Lista de Eventos</h2>
+    <ul>
+      <li *ngFor="let evento of eventosDiaIgrejota">
+        <h3>{{ evento.descricao }}</h3>
+        <h4>{{ evento.tipo === tiposDia.Normal ? "Encontro" : "Evento" }}</h4>
+      </li>
+    </ul>
+  </div>
+  <button *ngIf="auth.loggedIn() && loaded" (click)="openEditMode = !openEditMode">{{ openEditMode ? "Sair da Edição" : "Editar"}}</button>
+  <div class="editor" *ngIf="auth.loggedIn() && openEditMode">
+    <h2>Lista de Eventos</h2>
+    <div class="form-adicionar-dia" *ngFor="let evento of eventosDiaIgrejota">
+      <h4>Descrição do Evento:<input type="text" [(ngModel)]="evento.descricao"></h4>
+      <h4>Tipo de Evento: 
+        <select [(ngModel)]="evento.tipo">
+          <option [ngValue]="tiposDia.Normal" [selected]="evento.tipo === tiposDia.Normal">Encontro</option>
+          <option [ngValue]="tiposDia.Evento" [selected]="evento.tipo === tiposDia.Evento">Evento</option>
+        </select>
+      </h4>
+      <button (click)="editar(evento)">Salvar</button>
+      <button (click)="deletar(evento)">Deletar</button>
+    </div>
+    <button (click)="adicionarEvento()">Adicionar Evento</button>
+  </div>
+</div>
+    

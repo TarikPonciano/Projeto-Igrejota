@@ -1,0 +1,95 @@
+label {
+	padding-bottom: 4vw;
+}
+
+h1 {
+    line-height: 5vw;
+    width: 25vw;
+    font-family: Pridi;
+    color: #f7aa71;
+    margin: 6vw 0 7vw;
+    font-size: 5vw;
+}
+h2 {
+    color: #294d60;
+    font-family: PridiBold;
+    font-size: 5vw;
+    margin: 2vw 0vw;
+    line-height: 5vw;
+}
+.file-input {
+    font-family: Pridi;
+    font-size: 4vw;
+    float: left;
+    padding-right: 3vw;
+}
+input[type="file"] {
+    font-family: Pridi;
+}
+input.text-input {
+    padding-left: 2vw;
+    margin: 0vw;
+    font-family: Lateef;
+    font-size: 5vw;
+    border: .5vw solid #be6646;
+    border-radius: 2vw;
+    width: 80vw;
+    height: 5vw;
+}
+textarea.text-input {
+    padding-left: 2vw;
+    margin: 0vw;
+    font-family: Lateef;
+    font-size: 5vw;
+    border: .5vw solid #be6646;
+    border-radius: 2vw;
+    width: 80vw;
+}
+.actions{
+    margin-top: 2vw;
+    position: fixed;
+    background: #fff;
+    width: 60vw;
+    visibility: visible;
+    display: block;
+    right: 0vw;
+    top: 12vw;
+    padding: 2vw;
+    border: solid #f7aa71;
+    border-radius: 0vw 0vw 0vw 4vw;
+    z-index: 500 !important;
+}
+button.save {
+    font-family: BalooRegular;
+    line-height: 3.1vw;
+    font-size: 5vw;
+    height: 15vw;
+    margin: 0 1vw 0 0;
+    background-color: #294d60;
+    border: 0 solid;
+    border-radius: 5vw;
+    transition: background-color .2s,color .2s;
+    color: #ffeadd;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+button.delete {
+    font-family: BalooRegular;
+    line-height: 3.1vw;
+    font-size: 5vw;
+    height: 15vw;
+    margin: 0 1vw 0 0;
+    background-color: #00a6c4;
+    border: 0 solid;
+    border-radius: 5vw;
+    transition: background-color .2s,color .2s;
+    color: #ffeadd;
+    margin-right: 5vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    float: right;
+}
+button.delete:hover, button.save:hover {
+    background-color: #f7aa71;
+    color: black;
+}

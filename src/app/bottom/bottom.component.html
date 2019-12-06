@@ -1,0 +1,8 @@
+<footer class="tab-menu-mobile">
+	<ul>
+		<li><button [disabled]="selected === 'inicio'" [class.unselected]="selected !== 'inicio'" [class.selected]="selected === 'inicio'" (click)="goToInicio()"><img *ngIf="selected !== 'inicio'" class="tab-icon" src="../assets/home-bot.png" alt=""><img *ngIf="selected === 'inicio'" class="tab-icon" src="../assets/home-sel.png" alt=""><br>HOME</button>
+		<li><button [disabled]="selected === 'jogos'" [class.unselected]="selected !== 'jogos'" [class.selected]="selected === 'jogos'" (click)="goToAcervo()"><img *ngIf="selected !== 'jogos'" class="tab-icon" src="../assets/game-bot.png" alt=""><img *ngIf="selected === 'jogos'" class="tab-icon" src="../assets/game-sel.png" alt=""><br>ACERVO</button>
+		<!-- <li><button [disabled]="selected === 'calendario'" [class.unselected]="selected !== 'calendario'" [class.selected]="selected === 'calendario'" (click)="goToCalendario()"><img *ngIf="selected !== 'calendario'" class="tab-icon" src="../assets/cal-bot.png" alt=""><img *ngIf="selected === 'calendario'"class="tab-icon" src="../assets/cal-sel.png" alt=""><br>CALENDÁRIO</button></li> -->
+		<li><button [disabled]="selected === 'noticias'" [class.unselected]="selected !== 'noticias'" [class.selected]="selected === 'noticias'" (click)="goToNoticias()"><img *ngIf="selected !== 'noticias'" class="tab-icon" src="../assets/not-bot.png" alt=""><img *ngIf="selected === 'noticias'" class="tab-icon" src="../assets/not-sel.png" alt=""><br>NOTÍCIAS</button></li>
+	</ul>
+</footer>

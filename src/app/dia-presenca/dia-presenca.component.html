@@ -1,0 +1,17 @@
+<div class="section-header">
+	<img class="section-icon icon-calendar" src="../assets/cal.png" alt="">
+	<h1>{{ this.selectedDay.format("DD/MM/YYYY") }}</h1>
+</div>
+<hr class="section-line">
+<h2 *ngIf="alunosDiaIgrejota.length <= 0">Nenhum aluno presente</h2>
+<h2 *ngIf="alunosDiaIgrejota.length > 0">Alunos Presentes</h2>
+<ul>
+	<li *ngFor="let presenca of alunosDiaIgrejota">
+		<div class="square"></div>
+		<p class="no-wrap" [class.redux]="auth.loggedIn()">{{ presenca.aluno.nome }}</p>
+		<button class="remove" *ngIf="auth.loggedIn()" (click)="remover(presenca)"><img src="../assets/default-image.png" alt=""></button>
+	</li>
+</ul>
+<div *ngIf="auth.loggedIn()">
+	<button class="add-presenca center" (click)="adicionarPresenca()">Marcar Nova Presença</button><br>
+</div>
